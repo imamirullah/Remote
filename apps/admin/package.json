@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "npm run build --prefix ../.. --workspace=@remote-support/shared-types --workspace=@remote-support/shared-utils --workspace=@remote-support/ui && tsc && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
