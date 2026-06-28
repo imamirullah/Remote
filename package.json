@@ -1,0 +1,27 @@
+{
+  "name": "remote-support-platform",
+  "version": "1.0.0",
+  "description": "Browser-First Remote Support Platform Monorepo",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "services/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:auth": "npm run dev --workspace=services/auth",
+    "dev:api": "npm run dev --workspace=services/api",
+    "dev:websocket": "npm run dev --workspace=services/websocket",
+    "dev:billing": "npm run dev --workspace=services/billing",
+    "dev:notifications": "npm run dev --workspace=services/notifications",
+    "dev:dashboard": "npm run dev --workspace=apps/dashboard",
+    "dev:landing": "npm run dev --workspace=apps/landing-page",
+    "dev:admin": "npm run dev --workspace=apps/admin",
+    "build:all": "npm run build --workspaces --if-present",
+    "install:all": "npm install"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3",
+    "rimraf": "^5.0.5"
+  }
+}

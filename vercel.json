@@ -1,0 +1,43 @@
+{
+  "version": 2,
+  "cleanUrls": true,
+  "builds": [
+    {
+      "src": "apps/dashboard/package.json",
+      "use": "@vercel/static-build",
+      "config": { "distDir": "dist" }
+    },
+    {
+      "src": "apps/landing-page/package.json",
+      "use": "@vercel/static-build",
+      "config": { "distDir": "dist" }
+    },
+    {
+      "src": "apps/admin/package.json",
+      "use": "@vercel/static-build",
+      "config": { "distDir": "dist" }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/share",
+      "dest": "/apps/dashboard/index.html"
+    },
+    {
+      "src": "/dashboard/(.*)",
+      "dest": "/apps/dashboard/$1"
+    },
+    {
+      "src": "/admin/(.*)",
+      "dest": "/apps/admin/$1"
+    },
+    {
+      "src": "/assets/(.*)",
+      "dest": "/apps/landing-page/assets/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/apps/landing-page/$1"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+node_modules/
+.env
+.env.local
+.env.*.local
+dist/
+build/
+.system_generated/
+scratch/
+.vercel
+.cache/
+*.log
+.DS_Store

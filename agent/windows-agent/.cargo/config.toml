@@ -1,0 +1,11 @@
+[target.x86_64-pc-windows-msvc]
+rustflags = [
+    "-C", "linker=rust-lld",
+    "-L", "C:/Users/Amir Khan/OneDrive/Desktop/ai chat-bot/remote/agent/windows-agent/libs"
+]
+
+[build]
+rustflags = [
+    "-C", "linker=rust-lld",
+    "-L", "C:/Users/Amir Khan/OneDrive/Desktop/ai chat-bot/remote/agent/windows-agent/libs"
+]
