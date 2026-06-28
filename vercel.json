@@ -28,12 +28,20 @@
       "dest": "/apps/dashboard/assets/$1"
     },
     {
+      "src": "/dashboard",
+      "dest": "/apps/dashboard/index.html"
+    },
+    {
       "src": "/dashboard/(.*)",
       "dest": "/apps/dashboard/index.html"
     },
     {
       "src": "/admin/assets/(.*)",
       "dest": "/apps/admin/assets/$1"
+    },
+    {
+      "src": "/admin",
+      "dest": "/apps/admin/index.html"
     },
     {
       "src": "/admin/(.*)",
